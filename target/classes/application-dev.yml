@@ -1,0 +1,5 @@
+spring:
+  messages: This is from dev Environment
+
+server:
+  port: 8080

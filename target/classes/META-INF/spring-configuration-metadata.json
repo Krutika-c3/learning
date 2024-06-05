@@ -1,0 +1,42 @@
+{
+  "groups": [
+    {
+      "name": "mail",
+      "type": "com.application.springConfig.MailSettings",
+      "sourceType": "com.application.springConfig.MailSettings"
+    }
+  ],
+  "properties": [
+    {
+      "name": "mail.additional-headers",
+      "type": "java.util.Map<java.lang.String,java.lang.String>",
+      "sourceType": "com.application.springConfig.MailSettings"
+    },
+    {
+      "name": "mail.credentials",
+      "type": "com.application.springConfig.Credentials",
+      "sourceType": "com.application.springConfig.MailSettings"
+    },
+    {
+      "name": "mail.default-recipients",
+      "type": "java.util.List<java.lang.String>",
+      "sourceType": "com.application.springConfig.MailSettings"
+    },
+    {
+      "name": "mail.from",
+      "type": "java.lang.String",
+      "sourceType": "com.application.springConfig.MailSettings"
+    },
+    {
+      "name": "mail.host",
+      "type": "java.lang.String",
+      "sourceType": "com.application.springConfig.MailSettings"
+    },
+    {
+      "name": "mail.port",
+      "type": "java.lang.Integer",
+      "sourceType": "com.application.springConfig.MailSettings"
+    }
+  ],
+  "hints": []
+}

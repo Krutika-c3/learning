@@ -1,0 +1,67 @@
+#override default spring boot properties
+server:
+  port: 8081
+
+url: http://localhost:8080/students
+
+port:
+  url: Server port = ${server.port} Url = ${url}
+
+list:
+  of:
+    numbers: 1, 2, 3, 4, 5, 6, 7, 8, 9, 10
+
+#Simple properties
+mail:
+  host: mailer@mail.com
+  port: 9000
+  from: mailer@mail.com
+  
+  #List properties
+  defaultRecipients[0]: admin@mail.com
+  defaultRecipients[1]: owner@mail.com
+  
+  #Map Properties
+  additionalHeaders:
+    redelivery: true
+    secure: true
+  
+  #Object properties
+  credentials:
+    username: john
+    password: password
+    authMethod: SHA1
+
+spring:
+  messages: This is from default Environment
+  datasource:
+    url: jdbc:mysql://localhost:3306/springLearning
+    username: root
+    password: Mysql@123
+  jpa:
+    properties:
+      hibernate:
+        enable_lazy_load_no_trans: true
+
+graphiql:
+  enabled: true
+
+graphql:
+  servlet:
+    enabled: true
+    #made it false for enabling CustomGraphQLErrorHandler
+    exception-handlers-enabled: false
+    maxQueryDepth: 5
+    #by default /graphql
+    #mapping: /learning
+  playground:
+    enabled: true
+    headers:
+      Authorization: Bearer TOKEN
+    tabs:
+      - nane: Get student sample query
+        query: classpath:playground/student.graphqls
+        variables: classpath:playground/student_variables.json
+
+voyager:
+  enabled: true
