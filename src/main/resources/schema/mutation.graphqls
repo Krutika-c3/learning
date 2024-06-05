@@ -1,0 +1,24 @@
+type Mutation {
+    createStudent(createStudentRequest : CreateStudentRequest) : StudentResponse
+    deleteStudent(id : String) : Boolean
+    updateStudent(updateStudentRequest : UpdateStudentRequest) : StudentResponse
+}
+
+input UpdateStudentRequest {
+    id : String
+    firstName : String
+    lastName : String
+    email : String
+    address_id : Int
+    learningSubjects : [String]
+    fullName : String
+}
+
+
+input CreateStudentRequest{
+    firstName : String
+    lastName : String
+    email : String
+    address_id : Int
+    learningSubjects : [String]
+}

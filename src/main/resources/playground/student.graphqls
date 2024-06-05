@@ -1,0 +1,61 @@
+query student($id : String) {
+    student (id : $id) {
+        firstName
+        lastName
+        fullName
+        email
+        address_id
+        learningSubjects
+    }
+}
+
+mutation updateStudent($id : String){
+    updateStudent(updateStudentRequest : {
+        id : $id
+        firstName : "Rajvi"
+        lastName : "Chaurishiya"
+        email : "rajvi@gmail.com"
+        address_id :5
+        learningSubjects:[
+            "elasticsearch",
+            "graphql"]
+    }){
+        firstName
+        lastName
+        address_id
+        learningSubjects
+        fullName
+    }
+}
+
+mutation createStudent{
+    createStudent(createStudentRequest : {
+        firstName : "Abha"
+        lastName : "Kumar"
+        email : "abha@gmail.com"
+        address_id :5
+        learningSubjects:[
+            "social",
+            "PT"]
+    }){
+        firstName
+        lastName
+        address_id
+        learningSubjects
+        fullName
+    }
+}
+
+mutation deleteStudent($id : String){
+    deleteStudent(id : $id)
+}
+
+query allStudents{
+    allStudents{
+        firstName
+        lastName
+        fullName
+        address_id
+        learningSubjects
+    }
+}
